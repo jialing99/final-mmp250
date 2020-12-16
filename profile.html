@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+    <script>
+  		var firebaseConfig = {
+			apiKey: "AIzaSyDcI-dH0lele9YJMbXlBRfMDxx8QPGeY3A",
+  			authDomain: "twitter-fake-73d39.firebaseapp.com",
+			databaseURL: "https://twitter-fake-73d39.firebaseio.com",
+			projectId: "twitter-fake-73d39",
+			storageBucket: "twitter-fake-73d39.appspot.com",
+			messagingSenderId: "473877653448",
+			appId: "1:473877653448:web:475ea1b362853a51d002fd",
+			measurementId: "G-VY0E3PDBCH"
+		};
+		firebase.initializeApp(firebaseConfig);
+	</script>
+</head>
+<body id="timeline-back">
+   	<div id="nav">
+	 		<a class="link-nav" href="HOME.html"><i class="fa fa-home"></i> Home</a>
+	 		<a class="link-nav" href="HOME.html">Categories</a>
+	 		<a class="link-nav" href="about.html">About Us</a>
+	 		<a class="link-nav" href="forum.html">Forum</a>
+	 		<div class="link-nav dropdown">
+				<a class="dropbtn">Acount <i class="fa fa-caret-down"></i></a>
+				<div class="dropdown-content">
+      				<a href="profile.html" class="link-drop">Profile</a>
+      				<a href="index.html" class="link-drop">Timeline</a>
+    			</div>
+			</div>
+	 	</div>
+	 	
+	 	
+	 	<div id="flex-container">
+	 	<div id="post-container">
+	 		<button type="button" class="collapsible">Account <img src="Assets/keyboard_arrow_down-white-18dp.svg"></button>
+			<div class="content">
+      			<div id="login">
+      				<h3 class="subtitle">Login</h3>
+       				<div class="col c50">
+       					<p class="acc">E-mail</p>
+        				<input type="text" id="login-email" placeholder="Email" class="input-collapsible">
+       				</div>
+       				<div class="col c50">
+       					<p class="acc">Password</p>
+        				<input type="password" id="login-password" 	placeholder="Password" class="input-collapsible">
+       				</div>
+        			<div class="col c50">
+        				<button id="login-button" class="collapsible-btn">Login</button>
+        			</div>
+        			<div class="col c50">
+						<p class="acc">Don't have an account? <a href="sign-up.html">Click here </a></p>
+        			</div>
+        				<div class="col c100">
+        					<p id="login-message" class="acc"></p>
+        				</div>
+        		</div>
+        		<div id="user-info">
+        			<div class="col c100">
+        				<h3 class="subtitle">Profile</h3>
+        				<h3 class="subtitle"><div id ="user-name"></div></h3>
+        			</div>
+        			<div class="col c50">
+        				<button id="logout-button" class="collapsible-btn">Log Out</button>
+        			</div>
+        			<div class="col c50">
+						<a id="edit-profile-link" href="profile.html"><button class="collapsible-btn">Edit My Profile</button></a>
+        			</div>        	
+       			</div>
+			</div>		
+       	<div id="container">
+        	<div id="profile">
+            <div class="col c100">
+            	<h3>Options</h3>
+            </div>
+            <div class="col c50">
+            	<img id="profile-image" src="Assets/account_circle-white-18dp.svg" width="200px">
+            </div>
+            <div class="col c50">
+            	<p class="acc">Change Username</p>
+              	<input id="profile-display-name" placeholder="Username">
+            	<p class="acc">Add a Bio</p>
+            	<textarea id="profile-bio" placeholder="Type here"></textarea>
+            	<button id="update-profile" class="collapsible-btn">Update Profile</button>
+            </div>
+            <div class="col c100">
+            	<h5>Profile Image</h5>
+                <input id="profile-image-file" type="file" name="profile-img" accept="image/gif, image/jpeg, image/png">
+                <button id="submit-image" class="collapsible-btn">Upload</button>
+            </div>
+        	</div>
+    	</div>
+	</div>
+	</div>
+	<div id="footer">
+	 		<div class="foot-brand">
+	 			<img src="Assets/Logo/1x/SVG/Asset%204.svg" class="img-footer">
+	 			<h3>D-Bots</h3>
+	 		</div>
+	 		<div class="foot-nav">
+	 			<a href="HOME.html" class="link-nav">Home</a>
+	 			<a href="forum.html" class="link-nav">Forum</a>
+	 			<a href="about.html" class="link-nav">About</a>
+	 		</div>
+	 		<div class="foot-categories">
+	 			<a href="music.html" class="link-nav">Music</a>
+	 			<a href="games.html" class="link-nav">Games</a>
+	 			<a href="complement.html" class="link-nav">Complements</a>
+	 			<a href="moderation.html" class="link-nav">Moderation</a>
+	 		</div>
+		</div>
+    <script>
+			var coll = document.getElementsByClassName("collapsible");
+			var i;
+
+			for (i = 0; i < coll.length; i++) {
+				coll[i].addEventListener("click", function() {
+					this.classList.toggle("active");
+    		var content = this.nextElementSibling;
+					if (content.style.display === "block") {
+						content.style.display = "none";
+					} else {
+						content.style.display = "block";
+					}
+				});
+			}
+		</script>
+    
+    
+    <script src="JS/helpers.js"></script>
+    <script src="JS/auth.js"></script>
+    <script src="JS/profile.js"></script>
+
+</body>
+</html>

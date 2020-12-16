@@ -1,0 +1,339 @@
+*{
+	font-family: helvetica;
+	color: #fff;
+	margin: 0px;
+	box-sizing: border-box;
+}
+body{
+	background-color: darkslateblue;
+}
+a{
+	text-decoration: none;
+}
+/*header*/
+#flex-container{
+	align-items: center;
+	display: flex;
+	height: 100%;
+}
+#header{
+	background-image: url(Assets/Banner/SVG/Asset%202.svg);;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 91vh;
+}
+#text-banner{
+	text-align: center;
+	flex-grow: 4;
+	margin-left: 2%;
+}
+.back-black{
+	background-color: #000;
+	height: 100%;
+	width: 50%;
+	padding: 50px;
+	margin-left: 10%;
+}
+.welcome{
+	padding: 20px;
+}
+.info-banner{
+	font-size: 20px;
+	text-align: center;
+	align-self: center;
+	padding: 10px;
+}
+#logo-banner{
+	flex-grow: 1;
+}
+.logo{
+	width: 100%;
+	padding-right: 40%;
+}
+/*navigation*/
+#nav{
+	display: flex;
+	background-color: black;
+}
+.dropdown {
+	text-align: center;
+  	position: relative;
+}
+.dropdown .dropbtn {
+  text-align: center;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 80%;
+  z-index: 1;
+  top: 100%;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+.dropdown-content a:hover {
+  color: #fff;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.link-drop{
+	background-color: #fff;
+}
+.link-drop:hover{
+	background-color: #000;
+}
+.link-nav{
+	float: left;
+	text-align: center;
+	padding: 30px;
+	flex-grow: 1;
+}
+.link-nav:hover{
+	opacity: 0.8;
+	text-decoration: underline;
+}
+/*categories*/
+.title{
+	padding: 100px 100px 50px  100px;
+	text-align: center;
+	font-size: 50px;
+}
+.container1{
+	display: flex;
+	align-items: stretch;
+	margin: 50px 200px 150px 200px;
+	text-align: center;
+}
+.icons-category{
+	width: 75%;
+}
+.card{
+	flex-grow: 1;
+}
+/*Footer*/
+#footer{
+	background-color: #000;
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+#footer > div {
+	padding: 30px;
+}
+.img-footer{
+	width: 65%;
+}
+.foot-brand{
+	text-align: center;
+	margin-left: 5%;
+	margin: 10px 0px;
+}
+.foot-categories{
+	flex-grow: 3;
+	border-left: 2px solid #fff;
+	margin: 10px 0px;
+}
+.foot-nav{
+	flex-grow: 1;
+	margin: 10px 0px;
+}
+/*Sign Up.html*/
+input{
+	padding: 5px;
+	width: 100%;
+	border: none;
+	margin: 5px 0px;
+}
+input:focus{
+	background-color: lightskyblue;
+}
+/*Forum.html*/
+.c100{
+	width: 100%;
+}
+.forum-link{
+	color: #fff;
+	border: solid 2px #fff;
+	padding: 5px 25%;
+	border-radius: 5px;
+}
+.forum-link:hover{
+	color: #000;
+	background: #fff;
+	border: solid 2px #000;
+	padding: 5px 30%;
+	transition: 0.6s;
+}
+/*Login*/
+form{
+	text-align: left;
+}
+#Login-button{
+	color: #fff;
+	padding: 10px;
+	margin: 10px 0px;
+	width: 100%;
+	text-align: center;
+	background-color: #000;
+	border: 2px solid #fff;
+}
+#Login-button:hover{
+	color: #000;
+	background-color: #fff;
+	border: solid 2px #000;
+	transition: 0.6s;
+}
+/*Create Account*/
+#join-us{
+	color: #fff;
+	padding: 10px;
+	margin: 10px 0px;
+	width: 100%;
+	text-align: center;
+	background-color: #000;
+	border: 2px solid #fff;
+}
+#join-us:hover{
+	color: #000;
+	background-color: #fff;
+	border: solid 2px #000;
+	transition: 0.6s;
+}
+/*Timeline*/
+#timeline-back{
+	background-image: url(Assets/Banner/SVG/Asset%202.svg);
+	background-size: cover;
+}
+#post-container{
+	background-color: #000;
+	height: auto;
+	width: 100%;
+	padding: 25px;
+	margin: 10%;
+}
+.grid-container{
+	display: grid;
+ 	grid-template-columns: 15% auto 5%;
+}
+.grid-item{
+	text-align: center;
+}
+#img-prof{
+	width: 80px;
+	color: white;
+}
+#submit-post{
+	background-color: #000;
+	margin: 30% 5%;
+	border: none;
+}
+#submit-post:hover{
+	border: 2px solid white;
+}
+textarea{
+	width: 95%;
+	height: 50px;
+	resize: none;
+	color: #000;
+}
+.title2{
+	text-align: center;
+	padding: 50px;
+	font-size: 30px;
+}
+.timeline{
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	padding: 50px;
+	margin: 0px 10% 10%;
+	display: flex;
+	flex-direction: column;
+}
+.collapsible {
+ 	background-color: inherit;
+  	color: white;
+  	cursor: pointer;
+  	padding: 10px 0px;
+  	width: 100%;
+  	border: none;
+  	border-bottom: 2px solid #fff;
+  	text-align: center;
+  	outline: none;
+	font-size: 20px;
+}
+.active, .collapsible:hover {
+  	background-color: rgb(35, 35, 34);
+}
+.content {
+  	padding: 0 18px;
+ 	display: none;
+ 	overflow: hidden;
+ 	background-color: rgb(35, 35, 34);
+}
+.col{
+	float: left;
+	height: auto;
+}
+.c50{
+	width: 50%;
+	height: auto;
+}
+.input-collapsible{
+	width: 80%;
+}
+.collapsible-btn{
+	padding: 5px 10px ;
+	width: 50%;
+	background: rgb(35, 35, 34);
+	border: 2px solid #fff;
+	border-radius: 5px;
+}
+.collapsible-btn:hover{
+	background: #fff;
+	color: #000;
+}
+/*music, games, moderation, complements html*/
+.container-menu{
+	display: flex;
+	margin: 20px 150px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+	padding: 10px;
+}
+.menu{
+	background-color: #000;
+}
+#header2{
+	background-image: url(Assets/Banner/SVG/Asset%202.svg);;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 90vh;
+}
+.grid-container1 {
+	margin: 0% 10%;
+  	display: grid;
+  	grid-template-columns: auto auto auto;
+  	grid-template-rows: auto;
+  	grid-gap: 10px;
+}
+
+.grid-container1 > div {
+  	background-color: rgba(0, 0, 0, 0.8);
+  	text-align: center;
+  	padding: 10px;
+	color: fff;
+}
+.img-music{
+	width: 200px;
+}
